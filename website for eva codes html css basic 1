@@ -1,0 +1,134 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>EVA LOVIA</title>
+    <meta charset="utf-8">
+    <style>
+        h1 {
+            background-color: black;
+            color: rgb(231, 201, 65);
+            text-align: center;
+            padding: 10px;
+        }
+
+        body {
+            margin: 100px;
+            background-color: rgb(105, 130, 199);
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;;
+        }
+
+        p {
+            color: rgb(0, 0, 0);
+            margin: 20px;
+        }
+
+        ul {
+            color: rgb(221, 30, 30);
+            list-style-type: square;
+            padding-left: 40px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        #bbb {
+            color: beige;
+            background-color: brown;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        h2 {
+            background-color: black;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        h3 {
+            color: rgb(0, 0, 0);
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+
+        #carreiraa, #carreiraindustria {
+            background-color: brown;
+            padding: 15px;
+            color: white;
+            border-radius: 5px;
+        }
+
+        img {
+            display: block;
+            margin: 20px auto;
+            border: 3px solid black;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>THE PERFECT GIRL</h1>
+
+    <img src="https://i.ebayimg.com/images/g/kN8AAOSweJxlps4Z/s-l1200.png" width="500" alt="Eva Lovia">
+
+    <p id="bbb">
+        SIMPLESMENTE UMA LINDA MULHER...<br>
+        <strong>Eva Lovia - Biografia</strong><br>
+        <strong>Nome de nascimento:</strong> Candice Clarke<br>
+        <strong>Data de nascimento:</strong> 29 de maio de 1989<br>
+        <strong>Local de nascimento:</strong> Wilmington, Carolina do Norte, Estados Unidos
+    </p>
+
+    <ul>
+        <li>
+            <h2>INÍCIO DE VIDA E CARREIRA</h2>
+            <p id="carreiraa">
+                Com ascendência japonesa e latina, Eva cresceu em Wilmington, Carolina do Norte, em uma família multicultural. Antes de entrar na indústria adulta, ela estudou na Universidade de East Carolina, onde mostrou interesse em design gráfico e comunicação.<br>
+                Sua entrada no entretenimento adulto começou de forma casual, realizando trabalhos de webcam e fotografia. Logo, seu carisma, beleza exótica e abordagem profissional a destacaram no mercado. Trabalhou com diversas produtoras renomadas e rapidamente se tornou uma das artistas mais populares da indústria.
+            </p>
+        </li>
+        <li>
+            <h2>CARREIRA NA INDÚSTRIA DO ENTRETENIMENTO</h2>
+            <img src="https://www.rogreviews.com/wp-content/uploads/2016/08/eva123.png" width="300" alt="Eva Lovia">
+            <p id="carreiraindustria">
+                Eva Lovia ganhou reconhecimento por sua atuação e presença nas redes sociais. Ela também é lembrada por seu trabalho em conteúdos mais artísticos e pela forma como trouxe uma visão moderna e profissional ao setor.<br>
+                Além disso, Eva usou sua influência para educar seus seguidores sobre temas como independência financeira e saúde mental. Sempre aberta sobre os desafios e os benefícios de sua escolha de carreira, ela se tornou uma voz importante no debate sobre a indústria adulta.
+            </p>
+        </li>
+        <li>
+            <h2>EMPREENDEDORISMO E PROJETOS SOCIAIS</h2>
+            <p>
+                Eva Lovia ganhou reconhecimento por sua atuação e presença nas redes sociais. Ela também é lembrada por seu trabalho em conteúdos mais artísticos e pela forma como trouxe uma visão moderna e profissional ao setor.<br>
+                Além disso, Eva usou sua influência para educar seus seguidores sobre temas como independência financeira e saúde mental. Sempre aberta sobre os desafios e os benefícios de sua escolha de carreira, ela se tornou uma voz importante no debate sobre a indústria adulta.
+            </p>
+        </li>
+        <li>
+            <h2>VIDA PESSOAL</h2>
+            <p>
+                Eva Lovia, nascida Candice Clarke, mantém uma abordagem equilibrada entre sua vida pública e pessoal, sempre protegendo aspectos íntimos enquanto compartilha insights inspiradores com seus seguidores.<br><br>
+
+                <h3>Relacionamentos</h3>
+              <p>  Embora Eva tenha mencionado em algumas entrevistas que valoriza relacionamentos baseados em confiança e respeito mútuo, ela mantém detalhes específicos sobre sua vida amorosa fora dos holofotes. Sua discrição sobre esse aspecto reflete sua preocupação com a privacidade e o desejo de separar sua carreira pública da esfera pessoal.<br><br>
+              </p>
+                <h3>Hobbies e Interesses</h3>
+            <p>Fora do trabalho, Eva é apaixonada por um estilo de vida saudável e equilibrado. Ela é praticante de yoga e meditação, além de demonstrar interesse por atividades ao ar livre, como caminhadas e esportes aquáticos. Suas redes sociais frequentemente mostram momentos em que está explorando a natureza ou curtindo viagens, refletindo sua admiração por culturas diferentes.<br><br>
+        </p>
+                <h3>Causa e Ativismo</h3>
+            <p>   Eva também é vocal sobre questões de saúde mental e bem-estar, frequentemente destacando a importância do autocuidado. Ela utiliza sua plataforma para combater estigmas relacionados à indústria do entretenimento adulto e para encorajar discussões abertas sobre sexualidade, empoderamento e escolha profissional.<br><br>
+            </p>
+                <h3>Conexão com os Seguidores</h3>
+            <p>Eva mantém uma relação próxima com seus fãs, respondendo a perguntas e compartilhando histórias que inspiram. Ela costuma usar suas redes sociais para falar sobre desafios, aprendizados e sua jornada de autodescoberta.<br><br>
+            </p>
+                <h3>Família e Raízes Culturais</h3>
+            <p>Vinda de uma família multicultural, com ascendência japonesa e latina, Eva frequentemente menciona o quanto suas raízes influenciaram sua perspectiva de vida. Embora não divulgue muitos detalhes sobre seus familiares, ela já declarou que valoriza os valores tradicionais transmitidos por eles.<br><br>
+        </p>
+                <h3>Valores e Filosofia de Vida</h3>
+            <p>    Eva adota uma visão de vida baseada na autenticidade e no propósito. Em entrevistas, ela frequentemente menciona que acredita na importância de criar um impacto positivo e de não se deixar limitar por opiniões externas ou estigmas.
+            </p>
+        </li>
+    </ul>
+</body>
+</html>
