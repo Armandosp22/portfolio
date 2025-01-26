@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de Roupas</title>
+    <style>
+        /* style.css */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo h1 {
+            margin: 0;
+        }
+
+        header .carrinho button {
+            background-color: #ff9900;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            color: white;
+        }
+
+        header .carrinho button:hover {
+            background-color: #cc7a00;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .produtos {
+            display: flex;
+            gap: 20px;
+        }
+
+        .produto {
+            background-color: white;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 200px;
+        }
+
+        .produto img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .produto h3 {
+            font-size: 18px;
+            color: #333;
+        }
+
+        .produto p {
+            color: #666;
+        }
+
+        .produto button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .produto button:hover {
+            background-color: #218838;
+        }
+
+        .cart-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .cart-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            width: 300px;
+        }
+
+        #cartItems {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #cartItems li {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        button#closeCartBtn {
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button#closeCartBtn:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Loja de Roupas</h1>
+        </div>
+        <div class="carrinho">
+            <button id="showCartBtn">Carrinho (0)</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="produtos">
+            <div class="produto" data-id="1">
+                <img src="https://via.placeholder.com/150" alt="Camiseta">
+                <h3>Camiseta Básica</h3>
+                <p>Preço: R$ 49,90</p>
+                <button class="adicionar">Adicionar ao Carrinho</button>
+            </div>
+            <div class="produto" data-id="2">
+                <img src="https://via.placeholder.com/150" alt="Calça">
+                <h3>Calça Jeans</h3>
+                <p>Preço: R$ 89,90</p>
+                <button class="adicionar">Adicionar ao Carrinho</button>
+            </div>
+            <div class="produto" data-id="3">
+                <img src="https://via.placeholder.com/150" alt="Jaqueta">
+                <h3>Jaqueta de Couro</h3>
+                <p>Preço: R$ 199,90</p>
+                <button class="adicionar">Adicionar ao Carrinho</button>
+            </div>
+        </section>
+    </main>
+
+    <div id="cartModal" class="cart-modal">
+        <div class="cart-content">
+            <h2>Carrinho de Compras</h2>
+            <ul id="cartItems"></ul>
+            <p id="totalPrice">Total: R$ 0,00</p>
+            <button id="closeCartBtn">Fechar</button>
+        </div>
+    </div>
+
+    <script>
+        // script.js
+
+        let cart = [];
+
+        const products = [
+            { id: 1, name: "Camiseta Básica", price: 49.90 },
+            { id: 2, name: "Calça Jeans", price: 89.90 },
+            { id: 3, name: "Jaqueta de Couro", price: 199.90 }
+        ];
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const addButtons = document.querySelectorAll(".adicionar");
+            const cartButton = document.getElementById("showCartBtn");
+            const closeCartButton = document.getElementById("closeCartBtn");
+            const cartModal = document.getElementById("cartModal");
+            const cartItems = document.getElementById("cartItems");
+            const totalPrice = document.getElementById("totalPrice");
+
+            addButtons.forEach(button => {
+                button.addEventListener("click", function () {
+                    const productId = this.parentElement.dataset.id;
+                    const product = products.find(p => p.id == productId);
+
+                    if (product) {
+                        addToCart(product);
+                    }
+                });
+            });
+
+            cartButton.addEventListener("click", function () {
+                updateCartModal();
+                cartModal.style.display = "flex";
+            });
+
+            closeCartButton.addEventListener("click", function () {
+                cartModal.style.display = "none";
+            });
+
+            function addToCart(product) {
+                const existingProduct = cart.find(item => item.id === product.id);
+                if (existingProduct) {
+                    existingProduct.quantity++;
+                } else {
+                    cart.push({ ...product, quantity: 1 });
+                }
+                updateCartButton();
+            }
+
+            function updateCartButton() {
+                const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+                cartButton.textContent = `Carrinho (${totalItems})`;
+            }
+
+            function updateCartModal() {
+                cartItems.innerHTML = "";
+                let total = 0;
+                cart.forEach(item => {
+                    const li = document.createElement("li");
+                    li.textContent = `${item.name} x ${item.quantity} - R$ ${(item.price * item.quantity).toFixed(2)}`;
+                    cartItems.appendChild(li);
+                    total += item.price * item.quantity;
+                });
+                totalPrice.textContent = `Total: R$ ${total.toFixed(2)}`;
+            }
+        });
+    </script>
+</body>
+</html>
