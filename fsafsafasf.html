@@ -1,0 +1,149 @@
+/* Frontend - HTML e CSS Melhorado */
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja Gamer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Rajdhani', sans-serif;
+            background-color: #0a0a0a;
+            color: white;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        header {
+            background: linear-gradient(90deg, #ff00ff, #6600ff);
+            padding: 20px;
+            text-align: center;
+            font-size: 28px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        h2 {
+            font-size: 26px;
+            color: #00ffcc;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            justify-items: center;
+        }
+
+        .produto {
+            background: #1f1f1f;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 300px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0px 0px 10px rgba(0, 255, 204, 0.3);
+        }
+
+        .produto:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 0px 20px rgba(0, 255, 204, 0.7);
+        }
+
+        .produto img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .produto h3 {
+            font-size: 20px;
+            margin: 10px 0;
+            color: #ff00ff;
+        }
+
+        .produto p {
+            font-size: 18px;
+            font-weight: bold;
+            color: #00ffcc;
+        }
+
+        button {
+            background: linear-gradient(90deg, #ff00ff, #6600ff);
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: 0.3s;
+            width: 100%;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background: linear-gradient(90deg, #6600ff, #ff00ff);
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🔥 Loja Gamer 🔥</h1>
+    </header>
+    <div class="container">
+        <h2>🔥 Produtos em Destaque 🔥</h2>
+        <div class="grid">
+            <div class='produto'>
+                <img src="mouse.jpg" alt="Mouse Gamer">
+                <h3>Mouse Gamer RGB</h3>
+                <p>🔥 De R$ 249,90 por apenas <strong>R$ 199,90</strong>! 🔥</p>
+                <button>🛒 Comprar Agora</button>
+            </div>
+            <div class='produto'>
+                <img src="teclado.jpg" alt="Teclado Mecânico">
+                <h3>Teclado Mecânico RGB</h3>
+                <p>🔥 Oferta Especial: <strong>R$ 349,90</strong>! 🔥</p>
+                <button>🛒 Comprar Agora</button>
+            </div>
+            <div class='produto'>
+                <img src="headset.jpg" alt="Headset Gamer">
+                <h3>Headset Gamer 7.1</h3>
+                <p>🔥 Promoção Relâmpago: <strong>R$ 279,90</strong>! 🔥</p>
+                <button>🛒 Comprar Agora</button>
+            </div>
+            <div class='produto'>
+                <img src="monitor.jpg" alt="Monitor Gamer">
+                <h3>Monitor Gamer 144Hz</h3>
+                <p>🔥 Apenas <strong>R$ 1.299,90</strong>! 🔥</p>
+                <button>🛒 Comprar Agora</button>
+            </div>
+            <div class='produto'>
+                <img src="cadeira.jpg" alt="Cadeira Gamer">
+                <h3>Cadeira Gamer Reclinável</h3>
+                <p>🔥 Oferta Especial: <strong>R$ 899,90</strong>! 🔥</p>
+                <button>🛒 Comprar Agora</button>
+            </div>
+            <div class='produto'>
+                <img src="controle.jpg" alt="Controle Gamer">
+                <h3>Controle Sem Fio</h3>
+                <p>🔥 De R$ 399,90 por apenas <strong>R$ 299,90</strong>! 🔥</p>
+                <button>🛒 Comprar Agora</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
